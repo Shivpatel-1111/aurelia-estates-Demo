@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurelia Estates | Luxury Residences & Commercial Spaces Across India</title>
+<meta name="description" content="Aurelia Estates designs and builds premium residential and commercial developments across Bengaluru, Mumbai, Pune, Chennai, Hyderabad and Noida. 15+ years, 25+ projects, 5,000+ happy families.">
+<meta name="keywords" content="Aurelia Estates, luxury real estate, property developer, apartments, villas, commercial spaces, India real estate">
+<meta property="og:title" content="Aurelia Estates | Where Exceptional Living Begins">
+<meta property="og:description" content="Thoughtfully designed residences and commercial spaces crafted for modern lifestyles, comfort and lasting value.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          warmwhite: "#f6f3ec",
+          paper: "#fbf9f4",
+          charcoal: "#1b1a17",
+          charcoalsoft: "#26241f",
+          stone: "#59544c",
+          stonelight: "#8a8478",
+          gold: "#b08d57",
+          goldlight: "#d8bd8e",
+        },
+        fontFamily: {
+          display: ["Fraunces", "Georgia", "serif"],
+          body: ["Manrope", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="font-body bg-warmwhite text-charcoal">
+
+<!-- ============================= NAVIGATION ============================= -->
+<header id="site-nav" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-content mx-auto px-6 lg:px-12 flex items-center justify-between py-5">
+    <a href="index.html" class="font-display text-2xl tracking-tight flex items-center gap-2">
+      <span class="text-gold">A</span>urelia <span class="hidden sm:inline">Estates</span>
+    </a>
+    <nav class="desktop-nav-links hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="properties.html" class="nav-link">Projects</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="properties.html" class="nav-link">Properties</a>
+      <a href="index.html#gallery" class="nav-link">Gallery</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="index.html#site-visit" class="btn btn-dark hidden md:inline-flex">Schedule a Visit</a>
+      <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden p-2">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 bottom-0 w-[82%] max-w-sm bg-charcoal text-warmwhite z-[60] px-8 py-8 flex flex-col">
+  <div class="flex items-center justify-between mb-12">
+    <span class="font-display text-xl">Menu</span>
+    <button id="mobile-menu-close" aria-label="Close menu" class="p-2">
+      <i data-lucide="x" class="w-7 h-7"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-6 text-lg font-display">
+    <a href="index.html">Home</a>
+    <a href="properties.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="properties.html">Properties</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="index.html#site-visit" class="btn btn-primary justify-center mt-auto">Schedule a Visit</a>
+</div>
+
+<main>
+
+<!-- ============================= HERO ============================= -->
+<section class="relative min-h-[100svh] flex items-end">
+  <div class="absolute inset-0 -z-10">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop" alt="Aurelia Heights architectural facade at golden hour" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-charcoal/20"></div>
+  </div>
+
+  <div class="max-content mx-auto w-full px-6 lg:px-12 pb-40 md:pb-48 pt-40">
+    <p class="eyebrow text-goldlight">Aurelia Estates — Est. 2010</p>
+    <span class="tick-rule">
+      <svg viewBox="0 0 120 10"><line x1="0" y1="5" x2="120" y2="5" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="10" stroke-width="1.5"/><line x1="40" y1="2" x2="40" y2="8" stroke-width="1"/><line x1="80" y1="2" x2="80" y2="8" stroke-width="1"/><line x1="120" y1="0" x2="120" y2="10" stroke-width="1.5"/></svg>
+    </span>
+    <h1 class="hero-heading font-display text-white text-5xl md:text-7xl leading-[1.05] max-w-3xl mt-6">
+      Where Exceptional<br>Living Begins
+    </h1>
+    <p class="text-white/80 text-base md:text-lg max-w-xl mt-6 leading-relaxed">
+      Discover thoughtfully designed residences crafted for modern lifestyles, comfort and lasting value.
+    </p>
+    <div class="flex flex-wrap gap-4 mt-9">
+      <a href="properties.html" class="btn btn-primary">Explore Properties</a>
+      <a href="#site-visit" class="btn btn-outline">Schedule a Visit</a>
+    </div>
+  </div>
+</section>
+
+<!-- Search / filter panel overlapping hero -->
+<section class="relative z-10 -mt-24 md:-mt-16 px-6 lg:px-12">
+  <div class="max-content mx-auto">
+    <form id="property-filter-form" class="search-panel blueprint-frame bg-paper border border-line shadow-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+      <div class="md:col-span-1">
+        <label for="filter-type" class="block text-xs uppercase tracking-widest text-stonelight mb-2">Property Type</label>
+        <select id="filter-type" class="input-field">
+          <option value="">All Types</option>
+          <option value="Apartments">Apartments</option>
+          <option value="Luxury Apartments">Luxury Apartments</option>
+          <option value="Villas">Villas</option>
+          <option value="Commercial">Commercial</option>
+        </select>
+      </div>
+      <div class="md:col-span-1">
+        <label for="filter-location" class="block text-xs uppercase tracking-widest text-stonelight mb-2">Location</label>
+        <select id="filter-location" class="input-field">
+          <option value="">All Locations</option>
+        </select>
+      </div>
+      <div class="md:col-span-1">
+        <label for="filter-bhk" class="block text-xs uppercase tracking-widest text-stonelight mb-2">BHK</label>
+        <select id="filter-bhk" class="input-field">
+          <option value="">Any Configuration</option>
+          <option value="2">2 BHK</option>
+          <option value="3">3 BHK</option>
+          <option value="4">4 BHK</option>
+          <option value="5">5 BHK</option>
+        </select>
+      </div>
+      <div class="md:col-span-1">
+        <label for="filter-price" class="block text-xs uppercase tracking-widest text-stonelight mb-2">Price Range</label>
+        <select id="filter-price" class="input-field">
+          <option value="">Any Budget</option>
+          <option value="0-6000000">Under ₹60 Lakh</option>
+          <option value="6000000-15000000">₹60 Lakh – ₹1.5 Cr</option>
+          <option value="15000000-35000000">₹1.5 Cr – ₹3.5 Cr</option>
+          <option value="35000000-0">₹3.5 Cr and above</option>
+        </select>
+      </div>
+      <div class="md:col-span-1 flex gap-3">
+        <button type="submit" class="btn btn-primary flex-1 justify-center">
+          <i data-lucide="search" class="w-4 h-4"></i> Search
+        </button>
+        <button type="button" id="filter-reset" aria-label="Reset filters" class="btn btn-ghost-dark px-4">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============================= FEATURED PROPERTIES ============================= -->
+<section class="py-28 md:py-36 px-6 lg:px-12">
+  <div class="max-content mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14 reveal">
+      <div>
+        <p class="eyebrow">Featured Developments</p>
+        <span class="tick-rule"><svg viewBox="0 0 120 10"><line x1="0" y1="5" x2="120" y2="5" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="10" stroke-width="1.5"/></svg></span>
+        <h2 class="font-display text-4xl md:text-5xl mt-5">Signature Addresses</h2>
+      </div>
+      <p class="text-stone max-w-md mt-4 md:mt-0">Four developments that define the Aurelia standard — from sea-facing towers to landscaped villa avenues.</p>
+    </div>
+    <div id="featured-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============================= SEARCH RESULTS ============================= -->
+<section id="search-results" class="py-20 px-6 lg:px-12 bg-paper border-y border-line">
+  <div class="max-content mx-auto">
+    <div class="mb-12 reveal">
+      <p class="eyebrow">Find Your Fit</p>
+      <h2 class="font-display text-4xl mt-3">Browse by Type, Location & Budget</h2>
+      <p class="text-stone max-w-xl mt-3">Use the search panel above to filter our full portfolio — results update instantly below.</p>
+    </div>
+    <div id="search-results-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============================= RESIDENTIAL PROJECTS ============================= -->
+<section class="py-28 md:py-32 px-6 lg:px-12">
+  <div class="max-content mx-auto">
+    <div class="mb-12 reveal">
+      <p class="eyebrow">Live, Elevated</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3">Residential Collections</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="properties.html#grand-residences" class="reveal group relative h-[26rem] overflow-hidden block">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Luxury apartment interior at The Grand Residences" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-7 text-white">
+          <p class="eyebrow text-goldlight mb-1">Apartments</p>
+          <h3 class="font-display text-2xl">The Grand Residences</h3>
+        </div>
+      </a>
+      <a href="properties.html#green-villas" class="reveal group relative h-[26rem] overflow-hidden block">
+        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1200&auto=format&fit=crop" alt="Private courtyard villa at Aurelia Green Villas" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-7 text-white">
+          <p class="eyebrow text-goldlight mb-1">Villas</p>
+          <h3 class="font-display text-2xl">Aurelia Green Villas</h3>
+        </div>
+      </a>
+      <a href="properties.html#orchard-villas" class="reveal group relative h-[26rem] overflow-hidden block">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1200&auto=format&fit=crop" alt="Coastal villa residence at Aurelia Orchard Villas" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/10 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-7 text-white">
+          <p class="eyebrow text-goldlight mb-1">Luxury Villas</p>
+          <h3 class="font-display text-2xl">Aurelia Orchard Villas</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= COMMERCIAL PROJECTS ============================= -->
+<section class="py-8 md:py-16 px-6 lg:px-12 bg-charcoal text-warmwhite">
+  <div class="max-content mx-auto py-16 md:py-20">
+    <div class="mb-12 reveal">
+      <p class="eyebrow">Build, Lease, Grow</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3">Commercial Developments</h2>
+      <p class="text-white/60 max-w-xl mt-3">Grade-A office and retail spaces engineered for the next decade of business.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <a href="properties.html#skyline-business-park" class="reveal group relative h-80 overflow-hidden block border border-white/10">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Skyline Business Park office towers exterior" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-7">
+          <p class="eyebrow text-goldlight mb-1">Office & Retail</p>
+          <h3 class="font-display text-2xl">Skyline Business Park</h3>
+          <p class="text-white/60 text-sm mt-1">Gachibowli, Hyderabad</p>
+        </div>
+      </a>
+      <a href="properties.html#aurelia-tech-square" class="reveal group relative h-80 overflow-hidden block border border-white/10">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" alt="Aurelia Tech Square commercial business park" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-7">
+          <p class="eyebrow text-goldlight mb-1">Office Spaces</p>
+          <h3 class="font-display text-2xl">Aurelia Tech Square</h3>
+          <p class="text-white/60 text-sm mt-1">Sector 62, Noida</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ABOUT ============================= -->
+<section id="about" class="py-28 md:py-36 px-6 lg:px-12">
+  <div class="max-content mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal blueprint-frame">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop" alt="Aurelia Estates architects reviewing building plans on site" loading="lazy" class="w-full h-[30rem] object-cover">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Our Story</p>
+      <span class="tick-rule"><svg viewBox="0 0 120 10"><line x1="0" y1="5" x2="120" y2="5" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="10" stroke-width="1.5"/></svg></span>
+      <h2 class="font-display text-4xl md:text-5xl mt-5 mb-6">Building on Trust, Since 2010</h2>
+      <p class="text-stone leading-relaxed mb-4">
+        Aurelia Estates began with a single promise: build the kind of home you'd want your own family to live in. Fifteen years on, that promise still shapes every drawing that leaves our studio — from the pitch of a roofline to the grain of a lobby floor.
+      </p>
+      <p class="text-stone leading-relaxed mb-8">
+        Our architecture philosophy favours honest materials, generous light and layouts that age well. We work with structural engineers, landscape designers and craftsmen who share that discipline, and we stay involved from the first survey to the final handover — because quality isn't a checklist, it's a habit.
+      </p>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <p class="font-display text-4xl text-gold"><span data-counter="15" data-suffix="+">0</span></p>
+          <p class="text-sm text-stone mt-1 uppercase tracking-wide">Years Experience</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl text-gold"><span data-counter="25" data-suffix="+">0</span></p>
+          <p class="text-sm text-stone mt-1 uppercase tracking-wide">Completed Projects</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl text-gold"><span data-counter="5000" data-suffix="+">0</span></p>
+          <p class="text-sm text-stone mt-1 uppercase tracking-wide">Happy Families</p>
+        </div>
+        <div>
+          <p class="font-display text-4xl text-gold"><span data-counter="12" data-suffix="+">0</span></p>
+          <p class="text-sm text-stone mt-1 uppercase tracking-wide">Cities Present</p>
+        </div>
+      </div>
+      <a href="about.html" class="btn btn-ghost-dark mt-10 inline-flex">Read Our Full Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= WHY CHOOSE US ============================= -->
+<section class="py-24 md:py-32 px-6 lg:px-12 bg-paper border-y border-line">
+  <div class="max-content mx-auto">
+    <div class="mb-14 reveal text-center max-w-2xl mx-auto">
+      <p class="eyebrow justify-center">The Aurelia Standard</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3">Why Families Choose Us</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="map-pin" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">Premium Locations</h3>
+        <p class="text-stone text-sm leading-relaxed">Every site is chosen for connectivity, future infrastructure and long-term appreciation.</p>
+      </div>
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="hard-hat" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">Quality Construction</h3>
+        <p class="text-stone text-sm leading-relaxed">RCC-framed structures, third-party quality audits, and materials sourced from certified vendors.</p>
+      </div>
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="compass" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">Modern Architecture</h3>
+        <p class="text-stone text-sm leading-relaxed">Contemporary design language balanced with functional, livable layouts for every family size.</p>
+      </div>
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="file-check-2" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">Transparent Process</h3>
+        <p class="text-stone text-sm leading-relaxed">RERA-registered projects, clear payment schedules and no hidden clauses in the fine print.</p>
+      </div>
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="calendar-check" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">On-Time Delivery</h3>
+        <p class="text-stone text-sm leading-relaxed">96% of our projects have handed over keys on or ahead of the committed date.</p>
+      </div>
+      <div class="feature-card reveal p-8 bg-warmwhite">
+        <i data-lucide="headset" class="w-7 h-7 text-gold mb-5"></i>
+        <h3 class="font-display text-xl mb-2">Dedicated Support</h3>
+        <p class="text-stone text-sm leading-relaxed">A single relationship manager guides you from booking through post-handover service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONSTRUCTION PROGRESS ============================= -->
+<section class="py-24 md:py-32 px-6 lg:px-12">
+  <div class="max-content mx-auto">
+    <div class="mb-14 reveal">
+      <p class="eyebrow">Live Site Updates</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3">Construction Progress</h2>
+      <p class="text-stone max-w-xl mt-3">Real-time milestones across our ongoing developments, updated monthly by our site engineering teams.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal border border-line p-7 bg-paper">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-display text-xl">Aurelia Heights</h3>
+          <span class="font-display text-2xl text-gold">72%</span>
+        </div>
+        <p class="text-xs text-stonelight uppercase tracking-wide mb-4">Whitefield, Bengaluru</p>
+        <div class="progress-track mb-3"><div class="progress-fill" data-progress="72"></div></div>
+        <p class="text-sm text-stone">Current stage: Interior finishing &amp; facade cladding</p>
+        <p class="text-sm text-stone">Expected completion: Q4 2027</p>
+      </div>
+      <div class="reveal border border-line p-7 bg-paper">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-display text-xl">Skyline Business Park</h3>
+          <span class="font-display text-2xl text-gold">45%</span>
+        </div>
+        <p class="text-xs text-stonelight uppercase tracking-wide mb-4">Gachibowli, Hyderabad</p>
+        <div class="progress-track mb-3"><div class="progress-fill" data-progress="45"></div></div>
+        <p class="text-sm text-stone">Current stage: Structural framework, Tower B</p>
+        <p class="text-sm text-stone">Expected completion: Q2 2028</p>
+      </div>
+      <div class="reveal border border-line p-7 bg-paper">
+        <div class="flex justify-between items-baseline mb-1">
+          <h3 class="font-display text-xl">Aurelia Tech Square</h3>
+          <span class="font-display text-2xl text-gold">28%</span>
+        </div>
+        <p class="text-xs text-stonelight uppercase tracking-wide mb-4">Sector 62, Noida</p>
+        <div class="progress-track mb-3"><div class="progress-fill" data-progress="28"></div></div>
+        <p class="text-sm text-stone">Current stage: Foundation &amp; podium levels</p>
+        <p class="text-sm text-stone">Expected completion: Q1 2029</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GALLERY ============================= -->
+<section id="gallery" class="py-24 md:py-32 px-6 lg:px-12 bg-charcoal text-warmwhite">
+  <div class="max-content mx-auto">
+    <div class="mb-14 reveal">
+      <p class="eyebrow">A Closer Look</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3">Property Gallery</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop" alt="Aurelia Heights tower facade, Whitefield Bengaluru" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Aurelia Heights — Facade</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1200&auto=format&fit=crop" alt="Living room interior at The Grand Residences, Mumbai" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Grand Residences — Living Room</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=1200&auto=format&fit=crop" alt="Modern kitchen interior in an Aurelia Estates apartment" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Signature Kitchen Design</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop" alt="Villa exterior with courtyard at Aurelia Green Villas" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Green Villas — Courtyard</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop" alt="Clubhouse and swimming pool amenity deck" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Clubhouse & Pool Deck</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1200&auto=format&fit=crop" alt="Landscaped garden avenue within a residential township" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Landscaped Avenues</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Skyline Business Park commercial tower, Hyderabad" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Skyline Business Park</span></div>
+      </div>
+      <div class="gallery-item reveal h-64 md:h-72">
+        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" alt="Rooftop terrace lounge with skyline view" loading="lazy" class="w-full h-full object-cover">
+        <div class="gallery-overlay"><span class="text-sm font-medium">Rooftop Terrace Lounge</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox modal -->
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Close gallery" class="absolute top-6 right-6 text-white/80 hover:text-gold"><i data-lucide="x" class="w-8 h-8"></i></button>
+  <button id="lightbox-prev" aria-label="Previous image" class="absolute left-3 md:left-8 text-white/80 hover:text-gold"><i data-lucide="chevron-left" class="w-10 h-10"></i></button>
+  <button id="lightbox-next" aria-label="Next image" class="absolute right-3 md:right-8 text-white/80 hover:text-gold"><i data-lucide="chevron-right" class="w-10 h-10"></i></button>
+  <div class="max-w-4xl w-full px-6">
+    <img id="lightbox-img" src="" alt="" class="w-full max-h-[75vh] object-contain mx-auto">
+    <div class="flex justify-between items-center mt-4 text-white/70 text-sm">
+      <span id="lightbox-caption"></span>
+      <span id="lightbox-counter"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= TESTIMONIALS ============================= -->
+<section class="py-24 md:py-32 px-6 lg:px-12 bg-paper">
+  <div class="max-content mx-auto max-w-3xl text-center">
+    <p class="eyebrow justify-center reveal">Client Voices</p>
+    <h2 class="font-display text-4xl md:text-5xl mt-3 mb-14 reveal">What Our Residents Say</h2>
+
+    <div class="overflow-hidden reveal">
+      <div id="testimonial-track" class="flex testimonial-track">
+        <figure class="w-full flex-shrink-0 px-4">
+          <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=200&auto=format&fit=crop" alt="Portrait of Ananya Rao" loading="lazy" class="w-16 h-16 rounded-full object-cover mx-auto mb-5">
+          <blockquote class="font-display text-xl md:text-2xl leading-snug mb-5">"Three years since we moved into Aurelia Heights and the build quality still feels brand new. Zero regrets."</blockquote>
+          <div class="flex justify-center gap-1 mb-2 text-gold">★★★★★</div>
+          <figcaption class="text-sm text-stone">Ananya Rao — Aurelia Heights, Bengaluru</figcaption>
+        </figure>
+        <figure class="w-full flex-shrink-0 px-4">
+          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=200&auto=format&fit=crop" alt="Portrait of Vikram Shah" loading="lazy" class="w-16 h-16 rounded-full object-cover mx-auto mb-5">
+          <blockquote class="font-display text-xl md:text-2xl leading-snug mb-5">"The team kept us informed at every construction milestone. Handover happened exactly on the promised date."</blockquote>
+          <div class="flex justify-center gap-1 mb-2 text-gold">★★★★★</div>
+          <figcaption class="text-sm text-stone">Vikram Shah — The Grand Residences, Mumbai</figcaption>
+        </figure>
+        <figure class="w-full flex-shrink-0 px-4">
+          <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=200&auto=format&fit=crop" alt="Portrait of Meera Nair" loading="lazy" class="w-16 h-16 rounded-full object-cover mx-auto mb-5">
+          <blockquote class="font-display text-xl md:text-2xl leading-snug mb-5">"Our villa's courtyard gets morning light exactly the way the architect promised at the sales office. Small detail, huge difference."</blockquote>
+          <div class="flex justify-center gap-1 mb-2 text-gold">★★★★★</div>
+          <figcaption class="text-sm text-stone">Meera Nair — Aurelia Green Villas, Bengaluru</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center gap-6 mt-10 reveal">
+      <button id="testi-prev" aria-label="Previous testimonial" class="p-2 border border-line hover:border-gold transition-colors"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+      <div class="flex gap-2">
+        <button data-testi-dot class="w-2 h-2 rounded-full bg-gold" aria-label="Testimonial 1"></button>
+        <button data-testi-dot class="w-2 h-2 rounded-full bg-line" aria-label="Testimonial 2"></button>
+        <button data-testi-dot class="w-2 h-2 rounded-full bg-line" aria-label="Testimonial 3"></button>
+      </div>
+      <button id="testi-next" aria-label="Next testimonial" class="p-2 border border-line hover:border-gold transition-colors"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= LOCATION ============================= -->
+<section class="py-24 md:py-32 px-6 lg:px-12">
+  <div class="max-content mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal blueprint-frame bg-charcoal bp-grid h-96 flex items-center justify-center border border-line">
+      <div class="text-center text-warmwhite/70 px-6">
+        <i data-lucide="map" class="w-10 h-10 mx-auto mb-3 text-gold"></i>
+        <p class="text-sm">Interactive map placeholder — connect Google Maps or Mapbox in production.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Neighbourhood Guide</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3 mb-6">Everything Nearby, Aurelia Heights</h2>
+      <p class="text-stone leading-relaxed mb-8">Positioned along the Whitefield tech corridor, Aurelia Heights sits within easy reach of the city's essential everyday landmarks.</p>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="flex gap-3">
+          <i data-lucide="train-front" class="w-5 h-5 text-gold mt-1 flex-shrink-0"></i>
+          <div><p class="font-semibold text-sm">Transportation</p><p class="text-sm text-stone">Namma Metro Purple Line — 6 min drive</p></div>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-gold mt-1 flex-shrink-0"></i>
+          <div><p class="font-semibold text-sm">Schools</p><p class="text-sm text-stone">Vydehi School of Excellence — 2.1 km</p></div>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="cross" class="w-5 h-5 text-gold mt-1 flex-shrink-0"></i>
+          <div><p class="font-semibold text-sm">Hospitals</p><p class="text-sm text-stone">Vydehi Institute of Medical Sciences — 1.8 km</p></div>
+        </div>
+        <div class="flex gap-3">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-gold mt-1 flex-shrink-0"></i>
+          <div><p class="font-semibold text-sm">Shopping</p><p class="text-sm text-stone">Phoenix Marketcity — 12 min drive</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SITE VISIT FORM ============================= -->
+<section id="site-visit" class="py-24 md:py-32 px-6 lg:px-12 bg-charcoal text-warmwhite">
+  <div class="max-content mx-auto grid lg:grid-cols-2 gap-14">
+    <div class="reveal">
+      <p class="eyebrow">Book a Tour</p>
+      <h2 class="font-display text-4xl md:text-5xl mt-3 mb-6">Schedule a Site Visit</h2>
+      <p class="text-white/60 leading-relaxed max-w-md">Walk through a show apartment or villa with one of our relationship managers. Choose a property, pick a time that works, and we'll confirm within a few hours.</p>
+      <div class="flex items-center gap-4 mt-10">
+        <i data-lucide="phone-call" class="w-6 h-6 text-gold"></i>
+        <div><p class="text-sm text-white/60">Prefer to call?</p><p class="font-display text-lg">+91 80 4567 1234</p></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form id="site-visit-form" class="grid sm:grid-cols-2 gap-5 bg-charcoalsoft border border-white/10 p-7 md:p-9">
+        <div class="sm:col-span-1">
+          <label for="visit-name" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Full Name</label>
+          <input id="visit-name" type="text" class="input-field" placeholder="Ananya Rao">
+          <p id="visit-name-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-1">
+          <label for="visit-phone" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Phone Number</label>
+          <input id="visit-phone" type="tel" class="input-field" placeholder="98765 43210">
+          <p id="visit-phone-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="visit-email" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Email Address</label>
+          <input id="visit-email" type="email" class="input-field" placeholder="you@example.com">
+          <p id="visit-email-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="visit-property" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Property</label>
+          <select id="visit-property" class="input-field">
+            <option value="">Select a property</option>
+            <option>Aurelia Heights, Bengaluru</option>
+            <option>The Grand Residences, Mumbai</option>
+            <option>Aurelia Green Villas, Bengaluru</option>
+            <option>Skyline Business Park, Hyderabad</option>
+            <option>Aurelia Riverside, Pune</option>
+            <option>Aurelia Orchard Villas, Chennai</option>
+          </select>
+          <p id="visit-property-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-1">
+          <label for="visit-date" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Preferred Date</label>
+          <input id="visit-date" type="date" class="input-field">
+          <p id="visit-date-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-1">
+          <label for="visit-time" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Preferred Time</label>
+          <input id="visit-time" type="time" class="input-field">
+          <p id="visit-time-error" class="field-error"></p>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="visit-message" class="block text-xs uppercase tracking-widest text-white/50 mb-2">Message (optional)</label>
+          <textarea id="visit-message" rows="3" class="input-field" placeholder="Anything specific you'd like us to prepare for your visit?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary sm:col-span-2 justify-center mt-2">Request Site Visit</button>
+      </form>
+      <div id="form-success" class="hidden bg-charcoalsoft border border-gold/40 p-9 text-center">
+        <i data-lucide="check-circle-2" class="w-10 h-10 text-gold mx-auto mb-4"></i>
+        <p class="font-display text-xl">Thank you! Your site visit request has been submitted successfully.</p>
+        <p class="text-white/60 text-sm mt-2">Our team will call you within 24 hours to confirm the schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= CONTACT ============================= -->
+<section id="contact" class="py-24 md:py-32 px-6 lg:px-12 bg-paper">
+  <div class="max-content mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div class="reveal">
+      <i data-lucide="map-pin" class="w-6 h-6 text-gold mb-4"></i>
+      <p class="font-display text-lg mb-2">Head Office</p>
+      <p class="text-sm text-stone leading-relaxed">Aurelia Towers, 4th Floor<br>Outer Ring Road, Whitefield<br>Bengaluru 560066, India</p>
+    </div>
+    <div class="reveal">
+      <i data-lucide="phone" class="w-6 h-6 text-gold mb-4"></i>
+      <p class="font-display text-lg mb-2">Phone</p>
+      <p class="text-sm text-stone">+91 80 4567 1234<br>+91 98765 43210</p>
+    </div>
+    <div class="reveal">
+      <i data-lucide="mail" class="w-6 h-6 text-gold mb-4"></i>
+      <p class="font-display text-lg mb-2">Email</p>
+      <p class="text-sm text-stone">sales@aureliaestates.in<br>support@aureliaestates.in</p>
+    </div>
+    <div class="reveal">
+      <i data-lucide="clock" class="w-6 h-6 text-gold mb-4"></i>
+      <p class="font-display text-lg mb-2">Office Hours</p>
+      <p class="text-sm text-stone">Mon – Sat: 9:30 AM – 7:00 PM<br>Sunday: 10:00 AM – 5:00 PM</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="bg-charcoal text-warmwhite pt-20 pb-8 px-6 lg:px-12">
+  <div class="max-content mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-14 border-b border-white/10">
+    <div>
+      <a href="index.html" class="font-display text-2xl"><span class="text-gold">A</span>urelia Estates</a>
+      <p class="text-white/50 text-sm mt-4 leading-relaxed max-w-xs">Designing and building premium residential and commercial developments across India since 2010.</p>
+      <div class="flex gap-4 mt-6">
+        <a href="#" aria-label="Instagram" class="text-white/60 hover:text-gold"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="Facebook" class="text-white/60 hover:text-gold"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="LinkedIn" class="text-white/60 hover:text-gold"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+        <a href="#" aria-label="YouTube" class="text-white/60 hover:text-gold"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-white/40 mb-5">Quick Links</p>
+      <ul class="space-y-3 text-sm text-white/70">
+        <li><a href="index.html" class="hover:text-gold">Home</a></li>
+        <li><a href="about.html" class="hover:text-gold">About Us</a></li>
+        <li><a href="properties.html" class="hover:text-gold">Properties</a></li>
+        <li><a href="index.html#gallery" class="hover:text-gold">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-gold">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-white/40 mb-5">Projects</p>
+      <ul class="space-y-3 text-sm text-white/70">
+        <li><a href="properties.html#aurelia-heights" class="hover:text-gold">Aurelia Heights</a></li>
+        <li><a href="properties.html#grand-residences" class="hover:text-gold">The Grand Residences</a></li>
+        <li><a href="properties.html#green-villas" class="hover:text-gold">Aurelia Green Villas</a></li>
+        <li><a href="properties.html#skyline-business-park" class="hover:text-gold">Skyline Business Park</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-widest text-white/40 mb-5">Contact</p>
+      <ul class="space-y-3 text-sm text-white/70">
+        <li>Aurelia Towers, Whitefield, Bengaluru 560066</li>
+        <li>+91 80 4567 1234</li>
+        <li>sales@aureliaestates.in</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-content mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 pt-8 text-xs text-white/40">
+    <p>© <span id="current-year"></span> Aurelia Estates. All rights reserved.</p>
+    <p>RERA Registered — Demo site for illustrative purposes only.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
