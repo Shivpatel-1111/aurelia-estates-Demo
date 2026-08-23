@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Aurelia Estates — Responsive refinements
+   Tailwind handles the bulk of layout; this file covers fine-tuning
+   at very small breakpoints (320px–425px) and print/large-screen edges.
+   ========================================================================== */
+
+@media (max-width: 380px) {
+  .hero-heading {
+    font-size: 2.1rem !important;
+    line-height: 1.12 !important;
+  }
+  .btn {
+    padding: 0.8rem 1.3rem;
+    font-size: 0.76rem;
+  }
+  .search-panel {
+    padding: 1rem !important;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 425px) {
+  .hero-heading {
+    font-size: 2.4rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktop-nav-links {
+    display: none;
+  }
+  .testimonial-track {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1536px) {
+  .max-content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Prevent any accidental horizontal scroll from wide sections */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

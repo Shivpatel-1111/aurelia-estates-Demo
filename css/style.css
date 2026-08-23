@@ -1,0 +1,376 @@
+/* ==========================================================================
+   Aurelia Estates — Core Stylesheet
+   Design tokens: warm white / charcoal / gold, Fraunces + Manrope
+   Signature motif: architect's blueprint grid + measurement ticks
+   ========================================================================== */
+
+:root {
+  --warm-white: #f6f3ec;
+  --paper: #fbf9f4;
+  --charcoal: #1b1a17;
+  --charcoal-soft: #26241f;
+  --stone: #59544c;
+  --stone-light: #8a8478;
+  --gold: #b08d57;
+  --gold-light: #d8bd8e;
+  --gold-dim: rgba(176, 141, 87, 0.35);
+  --line: rgba(27, 26, 23, 0.12);
+  --line-on-dark: rgba(246, 243, 236, 0.16);
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--warm-white);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold-dim);
+  color: var(--charcoal);
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---------- Blueprint signature motif ---------- */
+/* A thin architectural tick-rule that sits under eyebrows / headings,
+   evoking a scale ruler on a set of building plans. */
+.tick-rule {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+}
+.tick-rule svg {
+  width: 120px;
+  height: 10px;
+  overflow: visible;
+}
+.tick-rule line, .tick-rule path {
+  stroke: var(--gold);
+}
+
+/* Blueprint corner brackets, used to frame hero + feature imagery */
+.blueprint-frame {
+  position: relative;
+}
+.blueprint-frame::before,
+.blueprint-frame::after,
+.blueprint-frame .bp-corner-tl,
+.blueprint-frame .bp-corner-br {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--gold-light);
+  z-index: 2;
+}
+.blueprint-frame::before {
+  top: -10px;
+  left: -10px;
+  border-top: 1.5px solid var(--gold-light);
+  border-left: 1.5px solid var(--gold-light);
+}
+.blueprint-frame::after {
+  bottom: -10px;
+  right: -10px;
+  border-bottom: 1.5px solid var(--gold-light);
+  border-right: 1.5px solid var(--gold-light);
+}
+
+/* faint blueprint grid background used sparingly on dark sections */
+.bp-grid {
+  background-image:
+    linear-gradient(var(--line-on-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-on-dark) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bp-grid-light {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.9rem;
+  border-radius: 2px;
+  transition: all 0.35s var(--ease);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--charcoal);
+  border: 1px solid var(--gold);
+}
+.btn-primary:hover {
+  background: var(--charcoal);
+  color: var(--gold-light);
+  border-color: var(--charcoal);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--warm-white);
+  border: 1px solid rgba(246, 243, 236, 0.55);
+}
+.btn-outline:hover {
+  background: var(--warm-white);
+  color: var(--charcoal);
+  border-color: var(--warm-white);
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--charcoal);
+  color: var(--warm-white);
+  border: 1px solid var(--charcoal);
+}
+.btn-dark:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--charcoal);
+  transform: translateY(-2px);
+}
+.btn-ghost-dark {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--line);
+}
+.btn-ghost-dark:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ---------- Navigation ---------- */
+#site-nav {
+  transition: background-color 0.4s var(--ease), box-shadow 0.4s var(--ease), padding 0.4s var(--ease);
+  background: rgba(246, 243, 236, 0);
+}
+#site-nav.nav-scrolled {
+  background: rgba(251, 249, 244, 0.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--line);
+}
+#site-nav .nav-link {
+  position: relative;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#site-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s var(--ease);
+}
+#site-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.5s var(--ease);
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* ---------- Cards ---------- */
+.property-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -20px rgba(27, 26, 23, 0.25);
+}
+.property-card .card-img-wrap {
+  overflow: hidden;
+}
+.property-card .card-img-wrap img {
+  transition: transform 0.8s var(--ease);
+}
+.property-card:hover .card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.status-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+.status-ready { background: #e8ede3; color: #445a34; }
+.status-progress { background: #f3e6cf; color: #8a5c1f; }
+.status-launch { background: #ece2f3; color: #6a3f8f; }
+
+.feature-card {
+  border: 1px solid var(--line);
+  transition: border-color 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.feature-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+/* ---------- Progress bars ---------- */
+.progress-track {
+  background: var(--line);
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  width: 0%;
+  border-radius: 3px;
+  transition: width 1.6s var(--ease);
+}
+
+/* ---------- Gallery ---------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-item img {
+  transition: transform 0.7s var(--ease), filter 0.7s var(--ease);
+}
+.gallery-item:hover img {
+  transform: scale(1.09);
+}
+.gallery-item .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(27,26,23,0.75), rgba(27,26,23,0));
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.1rem;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 14, 12, 0.94);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+#lightbox.open {
+  display: flex;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .property-card, .gallery-item img, .progress-fill, .mobile-menu, .btn {
+    transition: none !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Testimonial carousel ---------- */
+.testimonial-track {
+  transition: transform 0.6s var(--ease);
+}
+
+/* ---------- Misc ---------- */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.input-field {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  transition: border-color 0.3s var(--ease);
+  width: 100%;
+}
+.input-field:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+.input-field.error {
+  border-color: #b3402f;
+}
+.field-error {
+  color: #b3402f;
+  font-size: 0.76rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+.field-error.show {
+  display: block;
+}
